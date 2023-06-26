@@ -32,9 +32,9 @@ export const Car = ({ dbList, id, name, color, price, dbCallback }) => {
         <>
             <div className="singleCarContainer">
                 <div className="carContainer">
-                    <div>Brand / model: {name}</div>
-                    <div>Color: {color}</div>
-                    <div>Price: {price}$</div>
+                    <div>Brand / model: <p className="carData">{name}</p></div>
+                    <div>Color: <p className="carData">{color}</p></div>
+                    <div>Price: <p className="carData">{price}$</p></div>
                 </div>
                 <div className="carDeleteContainer">
                     <button onClick={event => (event.preventDefault(), removeItem())}>Delete</button>

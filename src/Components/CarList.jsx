@@ -11,14 +11,17 @@ export const CarList = ({ dbList, dbCallback }) => {
         return (
             <>
                 <div className="carListContainerArea">
-                    <div className="carListContainer">
-                        {
-                            dbList.map(ele => {
-                                return (
-                                    <Car dbList={dbList} id={ele.id} name={ele.name} color={ele.color} price={ele.price} dbCallback={dbCallback} />
-                                )
-                            })
-                        }
+                    <div className="carListContainer" id="list">
+                        <h2 className="carListTitle">List of cars:</h2>
+                        <div className="listContainer">
+                            {
+                                dbList.map(ele => {
+                                    return (
+                                        <Car dbList={dbList} id={ele.id} name={ele.name} color={ele.color} price={ele.price} dbCallback={dbCallback} key={ele.id} />
+                                    )
+                                })
+                            }
+                        </div>
                     </div>
                 </div>
             </>

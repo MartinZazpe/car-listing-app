@@ -6,11 +6,13 @@ async function createConnection() {
 
     const mysql = require('mysql2/promise')
 
+
     const con = await mysql.createConnection({
-        host: 'localhost',
-        user: 'root',
-        password: '',
-        database: 'reactNodeTest'
+        host: 'sql7.freesqldatabase.com',
+        user: 'sql7628701',
+        password: 'YaLYAqEjvW',
+        database: 'sql7628701'
+        //   port: 3306??
     })
 
     await con.connect((err) => {

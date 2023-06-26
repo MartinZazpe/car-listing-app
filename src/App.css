@@ -1,3 +1,28 @@
+* {
+  font-family: 'mulish';
+  font-size: 12px;
+}
+
+/* this configuration for= .App is just a test */
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#carListSection {
+  flex: 1;
+}
+
+#addCarSection {
+  height: max-content;
+}
+
+
+
+
+
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -10,7 +35,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #647690;
   /* min-height: 100vh; */
   display: flex;
   flex-direction: column;
@@ -20,11 +45,63 @@
   color: white;
 }
 
+.App-header h1 {
+  color: white;
+}
+
 .App-link {
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
+.headerDiv {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+}
+
+.headerTitleContainer {
+  width: 40%;
+  display: Flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+.headerTitleContainer h1 {
+  /* width: 100%; */
+  background-color: #D9D9D9;
+  border-radius: 9px;
+  padding: 15px;
+  font-size: 24px;
+  color: #647690;
+  font-family: 'Hind';
+}
+
+.navbar {
+  width: 60%;
+}
+
+.navbar ul {
+  padding: 0px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.navbar ul li {
+  list-style: none;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: #FFFFFF;
+  font-family: 'Hind';
+}
+
+
+
+
+/* @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
@@ -32,10 +109,10 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */
 
 .carListContainerArea {
-  margin: 0 15%;
+  margin: 0 10%;
   /* width: 100%; */
   display: Flex;
   /* justify-content: center;
@@ -45,31 +122,64 @@
 
 .carListContainer {
   width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
   padding: 10px;
 }
 
+.listContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.carListTitle {
+  color: #647C90;
+  font-family: 'dancing script';
+  font-size: 18px;
+}
+
 .singleCarContainer {
+  color: #4e4f50;
   display: Flex;
   flex-flow: row wrap;
+  justify-content: space-between;
   width: 100%;
-  border: 1px solid black;
+  border: 1px solid #647C90;
+  margin-top: 5px;
 }
 
 .carContainer {
   /* width: 50%; */
   width: 60%;
+  padding: 5px;
 }
 
 .carDeleteContainer {
-  padding: 20px;
+  padding: 10px;
   width: 20%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.carDeleteContainer button {
+  color: #4e4f50;
+  border: none;
+  padding: 9px;
+  border-radius: 6px;
 }
 
 #addForm {
   padding: 30px;
+  background-color: #EDDED0;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+}
+
+.addTitle {
+  color: #647C90;
+  font-family: 'dancing script';
+  text-align: center;
+  font-size: 18px;
 }
 
 #addForm form {
@@ -84,11 +194,117 @@
   margin-top: 6px;
 }
 
+
 .errorsContainer {
   display: flex;
   flex-flow: column wrap;
 }
 
+
 .addError {
   color: red;
+}
+
+
+footer {
+  background-color: #746C70;
+  height: 50px;
+  width: 100%;
+  bottom: 0;
+  /* position: absolute; */
+  display: flex;
+  justify-content: center;
+}
+
+
+#about {
+  height: 30px;
+  /* margin: 5px 10%; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carData {
+  display: inline-block;
+  color: #647690;
+}
+
+footer div {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 16px;
+}
+
+footer div p a {
+  color: #EDDED0;
+  text-decoration: none;
+}
+
+#about {
+  background-color: #EDDED0;
+  margin: 0;
+}
+
+#about h4 {
+  margin: 0;
+}
+
+
+.aboutLink {
+  color: #EDDED0;
+  font-family: 'mulish';
+}
+
+
+/*Fixes for desktops ++ */
+@media (min-width: 992px) {
+
+  * {
+    font-size: 16px;
+  }
+
+  .headerTitleContainer {
+    width: 30%;
+  }
+
+  .headerTitleContainer h1 {
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+
+  .navbar {
+    width: 70%;
+  }
+
+  .carListTitle,
+  .addTitle {
+    font-size: 20px;
+  }
+
+
+  /*Fix car list placement*/
+  .listContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+
+  /**/
+
+
+
+  /*Fix car add form*/
+  #addForm form {
+    max-width: 50%;
+    margin: 0 auto;
+  }
+
+
+  /**/
+
+
+
 }

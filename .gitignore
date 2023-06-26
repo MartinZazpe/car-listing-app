@@ -21,3 +21,8 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+
+#mz personal
+#We can ignore server when we upload the file. The server should be uploaded by itself;
+/server

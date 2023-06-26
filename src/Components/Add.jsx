@@ -47,7 +47,7 @@ export const Add = ({ dbCallback }) => {
     return (
         <>
             <div id="addForm">
-                <h4>Add new car</h4>
+                <h4 className='addTitle'>Add new car</h4>
                 <div id="errorsContainer">
 
                     {addResponse != undefined &&
@@ -75,6 +75,7 @@ export const Add = ({ dbCallback }) => {
                     </select>
                     <button type='submit'>Add car</button>
                 </form>
+
             </div>
         </>
     )
