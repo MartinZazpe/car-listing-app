@@ -1,18 +1,17 @@
-const bodyParser = require('body-parser')
 
 let db
 
+const mysql = require('mysql2/promise')
+
 async function createConnection() {
-
-    const mysql = require('mysql2/promise')
-
 
     const con = await mysql.createConnection({
         host: 'sql7.freesqldatabase.com',
         user: 'sql7628701',
         password: 'YaLYAqEjvW',
-        database: 'sql7628701'
-        //   port: 3306??
+        database: 'sql7628701',
+        // port: process.env.PORT
+        port: 3306
     })
 
     await con.connect((err) => {
@@ -40,6 +39,8 @@ const indexMethods = {
         // res.send(list[0].forEach(element => {
         //     console.log(element.id)
         // }))
+
+        console.log('this should be the PORT ')
 
         res.send(list[0])
     },
