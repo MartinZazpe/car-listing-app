@@ -13,7 +13,7 @@ export const Car = ({ dbList, id, name, color, price, dbCallback }) => {
             const currentItemId = currentItem[0].id
 
             //Api endpoint request to delete item from db.
-            await axios.delete(`http://localhost:3001/delete/${currentItemId}`)
+            await axios.delete(`https://car-listing-server.vercel.app/delete/${currentItemId}`)
                 .then(res => {
                     console.log(res)
                     //set the list state

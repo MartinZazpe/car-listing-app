@@ -21,7 +21,7 @@ export const Add = ({ dbCallback }) => {
         const color = event.target.color.value
 
         //this one is for testing
-        const data = await axios.post('http://localhost:3001/add', {
+        const data = await axios.post('https://car-listing-server.vercel.app/', {
             form: {
                 name: name,
                 price: price,
