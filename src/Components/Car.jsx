@@ -3,6 +3,10 @@ import axios from 'axios'
 
 export const Car = ({ dbList, id, name, color, price, dbCallback }) => {
 
+    //testing axios headers
+    const headers = {
+        'Content-Type': 'text/plain'
+    }
 
 
     async function removeItem() {
@@ -13,6 +17,8 @@ export const Car = ({ dbList, id, name, color, price, dbCallback }) => {
             const currentItemId = currentItem[0].id
 
             //Api endpoint request to delete item from db.
+            // `http://localhost:8000/delete/${currentItemId}`
+            // `https://car-listing-server.vercel.app/delete/${currentItemId}`
             await axios.delete(`https://car-listing-server.vercel.app/delete/${currentItemId}`)
                 .then(res => {
                     console.log(res)

@@ -14,12 +14,16 @@ import axios from 'axios'
 
 function App() {
 
+
+
   //Here we set the list. this can then be passed as props
   const [dbList, setlist] = useState()
 
 
   async function getData() {
     const data = await axios.get('https://car-listing-server.vercel.app/')
+    // const data = await axios.get("http://localhost:8000/")
+
     console.log(data.data)
     setlist(data.data)
   }
@@ -29,6 +33,7 @@ function App() {
   }, [])
 
   async function dbCallback() {
+    // const data = await axios.get("http://localhost:8000/")
     const data = await axios.get('https://car-listing-server.vercel.app/')
     setlist(data.data)
   }
