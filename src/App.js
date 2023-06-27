@@ -19,7 +19,7 @@ function App() {
 
 
   async function getData() {
-    const data = await axios.get('http://localhost:3001/')
+    const data = await axios.get('https://car-listing-server.vercel.app/')
     console.log(data.data)
     setlist(data.data)
   }
@@ -29,7 +29,7 @@ function App() {
   }, [])
 
   async function dbCallback() {
-    const data = await axios.get("http://localhost:3001/")
+    const data = await axios.get("https://car-listing-server.vercel.app/")
     setlist(data.data)
   }
 
